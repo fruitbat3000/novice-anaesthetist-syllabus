@@ -1,14 +1,13 @@
 # Source register — novice-anaesthetist-syllabus
 
-Every source this project relies on, with provenance so claims can be traced and re-checked. **Verify identifiers (URLs, DOIs, references) — never reconstruct them from memory.** Mark anything unverified explicitly.
+Every source this project relies on, with provenance so claims can be traced and re-checked. **Verify identifiers (URLs, DOIs, references). Never reconstruct them from memory.** Mark anything unverified explicitly.
 
 | ID | Source | Type | Location / link | Retrieved | Verified? | Notes |
 |----|--------|------|-----------------|-----------|-----------|-------|
-| S1 | <title / author> | <web / PDF / dataset / email> | <URL or path> | 2026-09-23 | <yes / **unverified**> | <what it supports> |
-| S2 | | | | | | |
+| S1 | RCoA 2021 anaesthetics curriculum (Stage 1) | web / PDF | _to find_ | | **unverified** | Primary source for all site content |
 
 ## Provenance notes
-- <where a dataset came from, any transformations applied, licence/permission to use>
+- RCoA material is copyright. The site links to it and summarises; it does not reproduce it.
 
 ## Unverified / inferred
-- <claims not yet backed by a verified source — do not build on these as fact>
+- None yet.

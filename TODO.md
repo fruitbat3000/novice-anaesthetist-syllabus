@@ -1,15 +1,21 @@
 # To do — novice-anaesthetist-syllabus
 
-Outstanding work and open questions. Completed items move out (delete, or strike through and date). For anything larger than a checklist, consider GitHub Issues.
+Outstanding work and open questions. Completed items move out (delete, or strike through and date).
 
 ## Now
-- [ ] <the next concrete action — mirrors STATUS.md "Next action">
+- [ ] Define scope and audience (see open questions).
+- [ ] Find and verify the RCoA curriculum documents and log them in `SOURCES.md`.
 
 ## Soon
-- [ ] <thing>
+- [ ] Sketch the site structure (by curriculum domain? by month of training? by milestone such as the IAC?).
+- [ ] Choose a site technology and hosting (record the choice in `DECISIONS.md`).
+- [ ] Create a private GitHub repo and push.
 
 ## Someday / maybe
-- [ ] <thing>
+- [ ] Get departmental or school sign-off before sharing with trainees.
 
 ## Open questions
-- <question needing an answer before it can become a task>
+- Audience: one department/school, or any UK novice trainee?
+- Scope: the novice period to the IAC only, or all of Stage 1 / CT1?
+- Content depth: pure signposting (links plus short summaries), or added local teaching resources?
+- Hosting: public web, or restricted to trainees?

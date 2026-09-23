@@ -2,19 +2,19 @@
 
 _Last updated: 2026-09-23_
 
-**Lifecycle stage:** <capture | triage | initialise | active | paused | completed | archived | reopened>
+**Lifecycle stage:** initialise
 
 ## Where things stand
-<two or three lines — the current state in one screen>
+The project has been scaffolded. Its purpose is agreed: a website signposting the RCoA curriculum for year-1 trainees. Nothing has been built yet.
 
 ## Done recently
-- 2026-09-23 — <thing>
+- 2026-09-23: Project scaffolded from template; security class 0.
 
 ## In progress
-- <thing>
+- Nothing yet.
 
 ## Next action
-> <the single concrete next step — every non-archived project's STATUS ends with one>
+> Define scope and audience, then collect and verify the RCoA curriculum sources in `SOURCES.md`.
 
 ## Blockers / open questions
-- <thing, or "none">
+- See `TODO.md` open questions.

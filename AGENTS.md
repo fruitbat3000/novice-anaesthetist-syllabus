@@ -3,30 +3,27 @@
 Static, AI-agnostic description. Any assistant reads this first to orient. Session history lives in `CLAUDE.md`; do not put session logs here.
 
 ## What this is
-<one-paragraph description of the project and its goal>
+A website that signposts the RCoA curriculum for year-1 anaesthetic trainees (the novice period through Stage 1 / CT1). It organises and explains what trainees need to cover and links to the official RCoA material. The RCoA documents stay the authoritative source, and the site should never contradict or paraphrase them in a misleading way.
 
 ## Security class
-<0 Public | 1 Personal | 2 Confidential | 3 NHS confidential | 4 Patient-identifiable>
-Handling follows `security-classification.md`. <e.g. "Dummy/simulated data only until an IG route is agreed.">
+0 Public. Handling follows `security-classification.md`. The site uses published curriculum material only, with no trainee names, assessment results or patient data.
 
 ## Status
-<current state / what exists> — see `STATUS.md` for the live detail.
+Just scaffolded. See `STATUS.md` for the live detail.
 
 ## Structure
-- `code/` — <what's here> → GitHub
-- `data/` — heavy or sensitive files, **not in git** (on <Proton/Dropbox> / NHS OneDrive) <or delete if none>
-- `docs/` — generated output, **not in git** <or delete if none>
+- `code/`: website source → GitHub
 
 ## Conventions
 - Folder names kebab-case, UK English, ISO dates. Full rules: `shared-conventions/conventions.md`.
-- Text → private GitHub; sensitive heavy files → Proton/Cryptomator; NHS material → NHS OneDrive only.
+- Every curriculum claim on the site traces to an entry in `SOURCES.md`. Link to the RCoA and don't copy large sections of their text (copyright).
 - Source-of-truth precedence: spec → decisions → status → sources → session notes.
 
 ## Source-of-truth files
-- Spec: <path or "none">
+- Spec: none yet
 - Decisions: `DECISIONS.md`
 - Status: `STATUS.md`
 - Sources: `SOURCES.md`
 
 ## External sources / related folders
-<breadcrumbs: any folder this project draws on, supersedes, or relocated content from — bidirectional _AGENT-NOTE.md at both ends>
+- None yet.
