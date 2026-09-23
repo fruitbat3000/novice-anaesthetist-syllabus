@@ -62,7 +62,9 @@ async function checkPlain(key, url) {
   if (BOT_BLOCKED.some(re => re.test(host))) return manual.push(`${key}: ${url}`);
   const { status } = await get(url);
   if (status >= 200 && status < 400) ok++;
-  else problems.push(`\`${key}\`: HTTP ${status || 'error'} (${url})`);
+  // Some small sites refuse connections from cloud runners; flag these for a manual check.
+  else if (status === 0) manual.push(`${key}: ${url} (could not connect from the checker)`);
+  else problems.push(`\`${key}\`: HTTP ${status} (${url})`);
 }
 
 // Run with modest concurrency to be polite to e-LfH.
