@@ -40,3 +40,8 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ### 2026-09-23 (late) — Professional tone
 - Mark asked for the site to read as professional guidance, not in Dr Brooks's voice. His credit now appears **only** in the About page's Credit card, alongside Mark's. The inline "Dr Brooks's advice…" lines, the "(Brooks)" glossary tags and the footer credit were removed, and the copy was rewritten in a neutral third-person or imperative register. "Your first anaesthetic" is now "A GA step by step".
+
+### 2026-09-23 (end of session) — Credits, link-check notifications, write-up
+- Credited "Dr Mark Stubbington" in the About page Credit card, alongside Dr Brooks. Mark wants it there only, not in the footer (see `DECISIONS.md` "Tone and credits").
+- The link-check workflow now always succeeds and reports broken links only through the `link-check` issue, so there are no "workflow failed" emails. An early test run had emailed Mark about yairn.co.uk refusing GitHub runners. That run was resolved and issue #1 closed.
+- **Next step (restart here):** Mark sends the live link to Dr Brooks. When feedback arrives (by email, or as GitHub issues labelled `feedback`), apply it, then revisit the parked enhancements in `TODO.md` "Now". Keep new copy in the professional register.

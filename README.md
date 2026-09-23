@@ -2,6 +2,8 @@
 
 A website that signposts the Royal College of Anaesthetists (RCoA) curriculum for novice anaesthetists in their first year of training (Stage 1 / CT1). It does not replace the curriculum. It shows trainees what they need to cover, when to cover it and where the official material is, and links back to RCoA sources for the authoritative detail.
 
+**Live draft:** https://fruitbat3000.github.io/novice-anaesthetist-syllabus/ (GitHub Pages, deployed from `code/` on every push to `main`)
+
 ## Start here
 
 - **What it is / conventions:** [`AGENTS.md`](AGENTS.md)

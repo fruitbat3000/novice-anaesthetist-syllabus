@@ -4,6 +4,22 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-23 — Tone and credits
+
+**Decision:** The site reads as neutral professional guidance, not in Dr Brooks's voice. Contributors are credited **only** in the Credit card on the About page: Dr Alistair Brooks (source guide, adapted with permission, including the glossary) and Dr Mark Stubbington (compiled and maintains the site). There are no inline attributions ("Dr Brooks's advice…", "(Brooks)" tags) and no footer credit.
+
+**Context:** Mark found the attributed, first-person-style lines "a bit noddy" and wanted "just a website of professional guidance".
+
+**Options considered:** attribute inline throughout; credit in the footer on every page; credit once on the About page.
+
+**Rationale:** One clear credit meets the permission condition (reuse with credit) while keeping the guidance impersonal and authoritative in tone.
+
+**Consequences:** New content should use a third-person or imperative register ("Flush the cannula immediately…") and should not add per-item attribution. The About page credit covers adapted material.
+
+**Status:** accepted
+
+---
+
 ## 2026-09-23 — Publish publicly on GitHub Pages for review
 
 **Decision:** Push to a **public** GitHub repo (`fruitbat3000/novice-anaesthetist-syllabus`) and publish `code/` with GitHub Pages, so Mark can send Dr Brooks a link. The site is now light by default, with an optional dark mode.
