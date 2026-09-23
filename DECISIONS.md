@@ -4,6 +4,26 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-23 — Site structure and technology (first version)
+
+**Decision:**
+- **Technology:** a static site in `code/` (plain HTML, CSS and JS, no build step and no dependencies) that opens directly from `index.html`. All content lives in `code/data.js`.
+- **Structure:** six views: *Start here*, *Your first anaesthetic* (Dr Brooks's worked GA, in stages), *Syllabus* (his domain → group → topic structure, with each topic linked to e-LA sessions and tagged by IAC Key Capability cluster), *The IAC*, *Resources*, *About*.
+- **Interactivity:** "I have covered this" ticks per topic and per e-LA session, progress bars, search, IAC cluster filters, a "start here only" filter, deep links to topics, and export/import of progress. Progress is stored in the viewer's browser only (`localStorage`).
+- **Mapping:** topics link to the **current live** e-LA sessions. Retired Module 1 basic-science sessions are replaced by their Module 07a–07e equivalents. The 2010 WPBA list in Dr Brooks's guide is dropped in favour of the 2021 IAC clusters and evidence types.
+
+**Context:** Mark asked Claude to "run with" building an interactive site with learning resources, emphasising e-LfH. The structure is Claude's choice for Mark to review.
+
+**Options considered:** a static site generator (e.g. Eleventy) vs plain files; organising by week vs by IAC cluster vs by Dr Brooks's structure.
+
+**Rationale:** Plain files keep it local-only with nothing to install, easy to hand to the school later, and easy to host anywhere. Dr Brooks's structure is the one he designed for novices and it scales to the exams. IAC tags and the worked-GA view give the other two ways in without duplicating content.
+
+**Consequences:** Hosting later is a file copy. Links need periodic re-checking (method in `SOURCES.md`). If the school wants shared or tracked progress, that needs a different approach.
+
+**Status:** accepted (pending Mark's review of the content)
+
+---
+
 ## 2026-09-23 — Dr Alistair Brooks's guide may be reused
 
 **Decision:** The site may credit, link to and adapt Dr Alistair Brooks's *An Introduction to Anaesthesia* (`SOURCES.md` S2).

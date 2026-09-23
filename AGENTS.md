@@ -9,10 +9,10 @@ A website that signposts the RCoA curriculum for year-1 anaesthetic trainees (th
 0 Public. Handling follows `security-classification.md`. The site uses published curriculum material only, with no trainee names, assessment results or patient data.
 
 ## Status
-Just scaffolded. See `STATUS.md` for the live detail.
+First version built. See `STATUS.md` for the live detail.
 
 ## Structure
-- `code/`: website source → GitHub
+- `code/`: the website (static HTML/CSS/JS, no build step). Open `code/index.html`. Content lives in `code/data.js`; see `code/README.md`.
 - `docs/`: reference documents, **not in git** (currently *An Introduction to Anaesthesia* PDF)
 
 ## Conventions

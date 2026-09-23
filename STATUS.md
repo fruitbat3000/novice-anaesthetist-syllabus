@@ -5,19 +5,20 @@ _Last updated: 2026-09-23_
 **Lifecycle stage:** active
 
 ## Where things stand
-The project has been scaffolded. Its purpose is agreed: a website signposting the RCoA curriculum for year-1 trainees. Nothing has been built yet. The key input so far is the *An Introduction to Anaesthesia* PDF in `docs/` (see `SOURCES.md` S2), which could form the backbone of the site once it's re-mapped to the 2021 curriculum.
+A working first version of the site is in `code/`. Open `code/index.html` in a browser. It has 76 syllabus topics in Dr Brooks's structure, re-mapped to the 2021 curriculum and IAC, with 100 verified e-LA session links and 6 catalogue-section links. It also has a stage-by-stage "first anaesthetic", an IAC explainer, and resources, including links for Yorkshire. Progress ticks are saved in the browser. Nothing has been reviewed by a clinician yet.
 
 ## Done recently
-- 2026-09-23: Dr Brooks gave permission to reuse/adapt his guide with credit.
-- 2026-09-23: Scope agreed: Yorkshire school, up to the IAC, links (especially e-LfH), local only for now. See `DECISIONS.md`.
-- 2026-09-23: Saved *An Introduction to Anaesthesia* (PDF, S2) to `docs/`. It contains a ready-made novice syllabus, but one mapped to the 2010 curriculum.
-- 2026-09-23: Project scaffolded from template; security class 0.
+- 2026-09-23: Built the site (static HTML/CSS/JS; see `DECISIONS.md`). Tested in Chrome: navigation, ticks and progress, search and filters, and topic deep links.
+- 2026-09-23: Verified sources: RCoA Novice Guide and IAC Workbook v1.2 (S1, S4); the live e-LA catalogue (S3), which found that Module 1 has been restructured; guidelines (S6–S8); Yorkshire school and YAIRN (S9–S10).
+- 2026-09-23: Read Dr Brooks's PDF in full and mapped it (S2).
+- 2026-09-23: Scope agreed and permission to reuse the guide recorded.
 
 ## In progress
-- Nothing yet.
+- Mark to review the content and structure.
 
 ## Next action
-> Find and verify the RCoA IAC / novice curriculum material and the e-LfH anaesthesia content, then read Dr Brooks's PDF in full and map it against them. The guide can be reused and adapted with credit.
+> Mark reviews the site (content accuracy, tone, anything missing), ideally with Dr Brooks. Then add the Yorkshire local details (see `TODO.md`).
 
 ## Blockers / open questions
-- None blocking. Minor: confirm the Yorkshire school's exact details and local IAC process (`TODO.md`).
+- No git remote yet, so there is nothing to push to.
+- Yorkshire local IAC programme details are unknown. The deanery's old novice page has been retired.

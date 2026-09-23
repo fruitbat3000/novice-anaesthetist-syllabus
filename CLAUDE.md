@@ -19,3 +19,12 @@ Claude-specific working instructions **and** the running session history. Durabl
 - The school is Yorkshire.
 - Session ended here, ready to restart in this subfolder.
 - **Next step (restart here):** work through `TODO.md` "Now": verify the RCoA IAC material and e-LfH content, read the PDF in full and map it, then propose a site structure. Ask Mark about the Yorkshire school's local IAC process and teaching programme.
+
+### 2026-09-23 (later) — Sources verified, first site built (Claude Code, Mark's Mac)
+- `git pull` wasn't possible because the repo has no remote. Commits are local only.
+- Mark said to "run with" building an interactive site with learning resources, with e-LfH being particularly useful.
+- The RCoA site 403s curl/WebFetch, so it was read in Chrome. WebFetch did save the binary PDFs, which were then extracted with `pdftotext`. The IAC Workbook v1.2 and the e-LA Module 1 workbook are in the scratchpad only.
+- e-LfH: the catalogue is public. The browser endpoints `GetCatalogueChildComponents` and `GetDetailsPartialForCatalogueComponent` give public `Component/Details` IDs. **Don't run long synchronous loops on the catalogue page**, because it froze the tab. Use `fetch` from a light page such as `/cookiepolicy`. Found that Module 1 has been restructured (see `SOURCES.md` S3).
+- Built `code/` as a static site. All 100 e-LfH session links were checked with curl (200, not retired, code matched).
+- The Y&H deanery novice page has been retired. YAIRN was found as the school's teaching network.
+- Next: Mark reviews the site, then add Yorkshire local detail (`TODO.md`).
