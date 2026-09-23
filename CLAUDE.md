@@ -37,3 +37,6 @@ Claude-specific working instructions **and** the running session history. Durabl
 - Mark approved: a weekly link check, Dr Brooks's glossary as tappable terms, a printable checklist, per-topic feedback links, and a "Further resources" section. He'll loop back on the rest (timeline, evidence ideas per IAC cluster, self-tests, Yorkshire layer) after Dr Brooks reviews.
 - Further resources were all verified (S11). BJA Education was left out because its bot challenge stopped verification.
 - The link checker passes locally: 118 OK, 22 bot-protected links listed for checking by hand.
+
+### 2026-09-23 (late) — Professional tone
+- Mark asked for the site to read as professional guidance, not in Dr Brooks's voice. His credit now appears **only** in the About page's Credit card, alongside Mark's. The inline "Dr Brooks's advice…" lines, the "(Brooks)" glossary tags and the footer credit were removed, and the copy was rewritten in a neutral third-person or imperative register. "Your first anaesthetic" is now "A GA step by step".
