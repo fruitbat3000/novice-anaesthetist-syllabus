@@ -1,6 +1,7 @@
 # Weekly check that every link on the site still works (especially e-LfH sessions,
 # which get retired or renumbered). Opens or updates a GitHub issue if anything breaks,
-# and closes it again once everything passes.
+# and closes it again once everything passes. The run itself always succeeds, so
+# broken links are reported only by the issue, not by a "workflow failed" email.
 name: Weekly link check
 
 on:
@@ -37,7 +38,6 @@ jobs:
             else
               gh issue create --title "Broken links on the site" --label link-check --body-file link-report.md
             fi
-            exit 1
           elif [ -n "$existing" ]; then
             gh issue close "$existing" --comment "All links passed on $(date -u +%F)."
           fi
