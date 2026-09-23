@@ -1,0 +1,26 @@
+# Heavy / sensitive folders — live on the cloud drive or NHS OneDrive, never in git
+data/
+docs/
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# AI + OS cruft
+.claude/
+.DS_Store
+
+# Build / dependency output
+__pycache__/
+.venv/
+node_modules/
+dist/
+build/
+*.log
+
+# Generated PDFs (regenerated from source)
+*.pdf
