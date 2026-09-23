@@ -1,39 +1,23 @@
 # Decision records — novice-anaesthetist-syllabus
 
-Accepted decisions, newest first. One entry per decision. A decision here **overrides** session notes and status (see source-of-truth precedence). Do not record speculation — open questions live in `TODO.md`.
-
-Template for each entry:
+Accepted decisions, newest first. One entry per decision. A decision here **overrides** session notes and status (see source-of-truth precedence). Do not record speculation; open questions live in `TODO.md`.
 
 ---
 
-## 2026-09-23 — <decision title>
+## 2026-09-23 — Scope of the site
 
-**Decision:** <what was decided, stated plainly>
+**Decision:**
+- **Audience:** novice trainees in a single regional school of anaesthesia.
+- **Timespan:** the novice period up to the Initial Assessment of Competence (IAC).
+- **Depth:** mainly links, especially to e-Learning for Healthcare (e-LfH) modules. Content is signposting, not original teaching material.
+- **Access:** local only for now (run and viewed on Mark's machine). Public or school-wide hosting is a later decision.
 
-**Context:** <what prompted it; what problem it solves>
+**Context:** Answers from Mark to the scoping questions at project start.
 
-**Options considered:** <the alternatives, briefly>
+**Options considered:** national vs regional audience; up to IAC vs all of CT1; links only vs adding local teaching; public vs restricted.
 
-**Rationale:** <why this option>
+**Rationale:** Keeping the first version narrow and local makes it quick to build and easy to check before anyone else sees it.
 
-**Consequences:** <what follows; what this commits us to>
-
-**Status:** <accepted | superseded by <date> | reversed>
-
----
-
-## Example
-
-## 2026-07-20 — Sensitive files go to Proton Drive, not Dropbox
-
-**Decision:** Class-2 personal files for this project are stored on Proton Drive (E2EE, CH), not Dropbox.
-
-**Context:** Dropbox is US-hosted and not zero-knowledge; the project holds confidential personal material.
-
-**Options considered:** Dropbox as-is; Cryptomator vault over Dropbox; Proton Drive.
-
-**Rationale:** Proton gives native zero-knowledge with the least ongoing friction for a small volume.
-
-**Consequences:** The `data/` symlink points at Proton; must be "Made Available Offline" for scripts.
+**Consequences:** The site is organised around what a novice needs before the IAC. Each topic links to the relevant RCoA curriculum item and e-LfH module(s). No hosting or domain work is needed yet.
 
 **Status:** accepted

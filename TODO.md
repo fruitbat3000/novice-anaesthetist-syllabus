@@ -1,23 +1,23 @@
 # To do — novice-anaesthetist-syllabus
 
-Outstanding work and open questions. Completed items move out (delete, or strike through and date).
+Outstanding work and open questions. Completed items move out (delete, or strike through and date). Scope is fixed in `DECISIONS.md` (2026-09-23).
 
 ## Now
-- [ ] Define scope and audience (see open questions).
-- [ ] Find and verify the RCoA curriculum documents and log them in `SOURCES.md`.
-- [ ] Read `docs/An introduction to anaesthesia.pdf` in full and map its novice syllabus (Section 5) onto the 2021 Stage 1 curriculum: what carries over, what's missing, what's outdated.
+- [ ] Find and verify the RCoA 2021 curriculum material covering the novice period / IAC. Log it in `SOURCES.md` (S1).
+- [ ] Find and verify the e-LfH anaesthesia content and how its modules are organised. Log it in `SOURCES.md` (S3).
+- [ ] Read `docs/An introduction to anaesthesia.pdf` in full. Map its novice syllabus (Section 5) against the IAC requirements: what carries over, what's missing, what's outdated (it's written against the 2010 curriculum).
 
 ## Soon
-- [ ] Sketch the site structure (by curriculum domain? by month of training? by milestone such as the IAC?).
-- [ ] Choose a site technology and hosting (record the choice in `DECISIONS.md`).
+- [ ] Propose a site structure (for example by IAC domain, by week of the novice period, or following the PDF's GA-journey approach) and agree it with Mark.
+- [ ] For each topic, list the RCoA curriculum item and e-LfH module link(s).
+- [ ] Choose a site technology that runs locally. Record the choice in `DECISIONS.md`.
 - [ ] Create a private GitHub repo and push.
 
 ## Someday / maybe
-- [ ] Get departmental or school sign-off before sharing with trainees.
+- [ ] Ask Dr Alistair Brooks whether his guide can be credited, linked or adapted on the site.
+- [ ] Get sign-off from the school's leads before sharing with trainees.
+- [ ] Decide how to host it for the school (public web vs restricted).
 
 ## Open questions
-- Who wrote *An Introduction to Anaesthesia* (Mark?), and can the site reuse or adapt it?
-- Audience: one department/school, or any UK novice trainee?
-- Scope: the novice period to the IAC only, or all of Stage 1 / CT1?
-- Content depth: pure signposting (links plus short summaries), or added local teaching resources?
-- Hosting: public web, or restricted to trainees?
+- Which regional school? (Affects local links, contacts and any school-specific IAC process.)
+- Does Dr Brooks agree to reuse/adaptation of his guide?
