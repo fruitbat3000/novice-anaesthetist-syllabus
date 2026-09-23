@@ -29,6 +29,7 @@
       <a href="#syllabus" data-view="syllabus">Syllabus</a>
       <a href="#iac" data-view="iac">The IAC</a>
       <a href="#resources" data-view="resources">Resources</a>
+      <a href="#glossary" data-view="glossary">Glossary</a>
       <a href="#about" data-view="about">About</a>
     </nav>
   </header>
@@ -112,6 +113,7 @@
         <div class="toggles">
           <label><input type="checkbox" id="only-first"> Start-here topics only</label>
           <label><input type="checkbox" id="hide-done"> Hide topics I've covered</label>
+          <a class="print-link" href="#checklist">Printable checklist</a>
         </div>
       </div>
 
@@ -232,6 +234,32 @@
           <p class="small">Each hospital runs its own IAC preparation programme, which usually ends with emergency scenario training. Ask your College Tutor about the local programme and critical incident course.</p>
         </div>
       </div>
+
+      <h2 class="section-h" id="further">Further resources</h2>
+      <p>Free resources beyond e-LfH that are useful for the novice period. They are also linked from the relevant syllabus topics.</p>
+      <div class="grid-2" id="further-list"></div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section class="view" id="view-glossary" hidden>
+      <h1>Glossary</h1>
+      <p class="lede">Terms and abbreviations you will meet in theatre and in your portfolio. Many are adapted from Dr Brooks's glossary. Elsewhere on the site, <span class="term demo">underlined terms</span> can be tapped to show their definition.</p>
+      <div class="filters card glossary-filter">
+        <label class="search"><span class="sr-only">Filter glossary</span><input type="search" id="gq" placeholder="Filter terms…" autocomplete="off"></label>
+      </div>
+      <dl class="glossary" id="glossary-list"></dl>
+    </section>
+
+    <!-- PRINTABLE CHECKLIST -->
+    <section class="view" id="view-checklist" hidden>
+      <div class="no-print checklist-bar">
+        <a href="#syllabus">← Back to the syllabus</a>
+        <button class="btn" type="button" id="print-btn">Print or save as PDF</button>
+      </div>
+      <h1>Novice syllabus checklist</h1>
+      <p class="checklist-meta">Name: ______________________ &nbsp; Educational Supervisor: ______________________ &nbsp; Printed: <span id="print-date"></span></p>
+      <p class="small" id="checklist-summary"></p>
+      <div id="checklist"></div>
     </section>
 
     <!-- ABOUT -->
@@ -247,12 +275,17 @@
         <p class="small">Links were last checked on <span data-checked></span>. e-LfH session pages are public, but you need to sign in to launch a session.</p>
       </div>
       <div class="card">
+        <h2>Feedback</h2>
+        <p>Spotted something wrong, out of date, or missing? Each syllabus topic has a <strong>Suggest a change</strong> link, or you can <a data-link="feedbackNew" target="_blank" rel="noopener">send general feedback</a>. Both open a GitHub issue, which needs a free GitHub account.</p>
+      </div>
+      <div class="card">
         <h2>Your progress</h2>
         <p>Your ticks are saved only in this browser on this device. To move them to another browser, export them here and import them there.</p>
         <p class="actions">
           <button class="btn" id="export-progress" type="button">Export progress</button>
           <label class="btn ghost file-btn">Import progress<input type="file" id="import-progress" accept="application/json" hidden></label>
           <button class="btn danger" id="reset-progress" type="button">Clear all ticks</button>
+          <a class="btn ghost" href="#checklist">Printable checklist</a>
         </p>
         <p class="small" id="progress-msg" role="status"></p>
       </div>
@@ -261,7 +294,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p><strong>Draft for review.</strong> Adapted with permission from Dr Alistair Brooks's <em>An Introduction to Anaesthesia</em>. Not an official RCoA or e-LfH resource. Links checked <span data-checked></span>.</p>
+      <p><strong>Draft for review.</strong> Adapted with permission from Dr Alistair Brooks's <em>An Introduction to Anaesthesia</em>. Not an official RCoA or e-LfH resource. Links checked <span data-checked></span>. <a data-link="feedbackNew" target="_blank" rel="noopener">Send feedback</a></p>
     </div>
   </footer>
 

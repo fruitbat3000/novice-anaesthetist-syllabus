@@ -14,12 +14,15 @@ Every source this project relies on, with provenance so claims can be traced and
 | S8 | Resuscitation Council UK 2025 guidelines | web | https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines | 2026-09-23 | yes | The RCoA Novice Guide still links to the 2021 page, which now points to 2025. |
 | S9 | School of Anaesthesia and Intensive Care, Yorkshire and Humber (NHS England YH deanery site) | web | https://www.yorksandhumberdeanery.nhs.uk/anaesthesia · `/school-information/induction` · `/school-information/sources-help` | 2026-09-23 | partly: home page read in Chrome; sub-page URLs taken from its live navigation but not opened | The old "Local teaching and Novice courses" page now redirects to `/anaesthesia/old`, so it was **not used**. The site blocks scripted checks with a bot challenge. |
 | S10 | YAIRN: Yorkshire Anaesthesia and Intensive Care Regional Network | web | https://yairn.co.uk/ | 2026-09-23 | yes | Run by the Y&H School. "YAIRN Core" is for CT1–3. |
+| S11 | Further resources (beyond e-LfH) | web | Association of Anaesthetists monitoring standards 2021 (https://doi.org/10.1111/anae.15501, open access) and guidelines index; NICE NG45; ASA Physical Status statement 2026 (https://doi.org/10.1097/ao9.0000000000000002, via asahq.org redirect); RCoA "Anaesthesia and risk" and "You and your anaesthetic"; RCoA NAPs index + NAP4–7 pages; WFSA ATOTW; LITFL ECG library; e-LfH 07e_02_04 | 2026-09-23 | yes (curl, WebFetch, or Chrome for RCoA/Wiley/LWW) | **Not used:** BJA Education (a Cloudflare challenge even in Chrome, so unverifiable); the RCoA "risk explained" page (403 access denied); the Association's "Checking anaesthetic equipment" guideline (page says it is under review, and no current version is shown). |
+| S12 | Dr Brooks's glossary (part of S2) | PDF | as S2 | 2026-09-23 | yes | Adapted into `glossary` in `code/data.js`, with entries marked "(Brooks)". Doses and dated guideline citations were deliberately left out. |
 
 ## Provenance notes
 - RCoA material is copyright. The site links to it and paraphrases briefly. It does not reproduce it.
 - e-LfH session descriptions were **not** copied. The site's topic notes are our own words or Dr Brooks's (with permission).
 
 ## Re-checking links
+- Automated: `.github/workflows/link-check.yml` runs `scripts/check-links.mjs` every Monday and opens a `link-check` issue if anything breaks. Run it locally with `node scripts/check-links.mjs`.
 - e-LfH: `curl -sL <Component/Details URL>` works (no bot block). Check for a 200, no `[Retired]`, and a title code that matches.
 - RCoA and Y&H deanery: open them in a real browser. They block curl and WebFetch.
 

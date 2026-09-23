@@ -86,6 +86,7 @@
         el('h2', null, stage.title),
         el('ul', null, stage.points.map(p => el('li', null, p))),
         el('div', { class: 'topic-chips' }, stage.topics.map(topicChip))))));
+    $$('#journey-list li li').forEach(markTerms);
   }
 
   /* ---------- syllabus ---------- */
@@ -140,7 +141,19 @@
           el('label', { for: cbId, class: 'topic-title' }, t.title),
           tags)),
       t.note ? el('p', { class: 'topic-note' }, t.note) : null,
-      res.children.length ? res : null);
+      res.children.length ? res : null,
+      el('p', { class: 'topic-foot' }, ext(feedbackUrl(t), 'Suggest a change', 'suggest')));
+  }
+
+  function feedbackUrl(t) {
+    const body = [
+      `Topic: ${t.title} (id: ${t.id})`,
+      `Section: ${t.domain.name} > ${t.group.name}`,
+      '',
+      'What should change, and why? (Please include a source if it is a factual correction.)',
+      '',
+    ].join('\n');
+    return `${S.links.repo}/issues/new?labels=feedback&title=${encodeURIComponent('Feedback: ' + t.title)}&body=${encodeURIComponent(body)}`;
   }
 
   function renderSyllabus() {
@@ -159,6 +172,7 @@
     });
     $('#syllabus-list').replaceChildren(...out);
     $('#syllabus-empty').hidden = shown > 0;
+    $$('#syllabus-list .topic-note').forEach(markTerms);
   }
 
   /* ---------- IAC clusters ---------- */
@@ -173,15 +187,115 @@
     }));
   }
 
+  /* ---------- further resources ---------- */
+  function renderFurther() {
+    $('#further-list').replaceChildren(...S.further.map(g => el('div', { class: 'card' },
+      el('h3', null, g.name),
+      el('ul', { class: 'linklist further' }, g.items.map(([title, key, desc]) =>
+        el('li', null, ext(S.links[key], title, 'ext'), el('span', { class: 'desc' }, desc)))))));
+  }
+
+  /* ---------- glossary ---------- */
+  const terms = S.glossary.filter(g => g.match).map(g => ({ g, re: new RegExp(g.match, /[a-z]/.test(g.match.replace(/\\b|\\d/g, '')) ? 'i' : '') }));
+
+  // Wrap the first use of each glossary term in a block of text with a tappable term.
+  function markTerms(root) {
+    if (!root || root.dataset.terms) return;
+    root.dataset.terms = '1';
+    const used = new Set();
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => n.parentElement.closest('a, button, code, .term, label, h1, h2, h3') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      let text = node.nodeValue;
+      const frag = document.createDocumentFragment();
+      let changed = false;
+      for (;;) {
+        let best = null;
+        for (const t of terms) {
+          if (used.has(t.g.term)) continue;
+          const m = t.re.exec(text);
+          if (m && (!best || m.index < best.m.index)) best = { t, m };
+        }
+        if (!best) break;
+        used.add(best.t.g.term);
+        changed = true;
+        frag.append(text.slice(0, best.m.index));
+        frag.append(el('button', { type: 'button', class: 'term', 'data-term': best.t.g.term, 'aria-haspopup': 'dialog' }, best.m[0]));
+        text = text.slice(best.m.index + best.m[0].length);
+      }
+      if (changed) { frag.append(text); node.replaceWith(frag); }
+    });
+  }
+
+  const pop = el('div', { class: 'term-pop', role: 'dialog', hidden: true });
+  document.body.append(pop);
+  function showTerm(btn) {
+    const g = S.glossary.find(x => x.term === btn.dataset.term);
+    if (!g) return;
+    pop.replaceChildren(el('strong', null, g.term), el('p', null, g.def), el('a', { href: '#glossary' }, 'Full glossary'));
+    pop.hidden = false;
+    const r = btn.getBoundingClientRect();
+    const w = Math.min(340, window.innerWidth - 32);
+    pop.style.width = w + 'px';
+    pop.style.left = Math.max(16, Math.min(r.left + window.scrollX, window.scrollX + window.innerWidth - w - 16)) + 'px';
+    pop.style.top = (r.bottom + window.scrollY + 6) + 'px';
+    pop.dataset.for = g.term;
+  }
+  function hideTerm() { pop.hidden = true; pop.dataset.for = ''; }
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.term[data-term]');
+    if (btn) { e.preventDefault(); pop.dataset.for === btn.dataset.term && !pop.hidden ? hideTerm() : showTerm(btn); return; }
+    if (!e.target.closest('.term-pop')) hideTerm();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') hideTerm(); });
+
+  function renderGlossary(q = '') {
+    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    const list = [...S.glossary].sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }))
+      .filter(g => words.every(w => (g.term + ' ' + g.def).toLowerCase().includes(w)));
+    $('#glossary-list').replaceChildren(...list.flatMap(g => [el('dt', null, g.term), el('dd', null, g.def)]));
+  }
+
+  /* ---------- printable checklist ---------- */
+  function renderChecklist() {
+    $('#print-date').textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    const tDone = topics.filter(t => progress.topics[t.id]).length;
+    const eDone = allEla.filter(c => progress.ela[c]).length;
+    $('#checklist-summary').textContent = `Topics covered: ${tDone} of ${topics.length}. e-LfH sessions completed: ${eDone} of ${allEla.length}. ★ = start-here topic.`;
+    const box = on => (on ? '☑' : '☐');
+    const sessionLabel = c => `${box(progress.ela[c])} ${isCode(c) ? c : S.ela[c][0].replace(/ \(section\)$/, '')}`;
+    const row = t => el('tr', null,
+      el('td', { class: 'cl-have' }, box(progress.topics[t.id])),
+      el('td', null, t.title, t.first ? ' ★' : ''),
+      el('td', { class: 'cl-iac' }, t.iac.map(c => S.clusters[c].short).join(', ')),
+      el('td', { class: 'cl-ela' }, t.ela.filter(c => S.ela[c]).map(sessionLabel).join('   ')));
+    const groupBody = g => el('tbody', null,
+      el('tr', { class: 'cl-group' }, el('td', { colspan: '4' }, g.name)),
+      g.topics.map(row));
+    const head = el('thead', null, el('tr', null,
+      el('th', { class: 'cl-have' }, 'I have'), el('th', null, 'Topic'), el('th', null, 'IAC'), el('th', null, 'e-LfH sessions')));
+    $('#checklist').replaceChildren(...S.domains.map(d => el('section', { class: 'cl-domain' },
+      el('h2', null, d.name),
+      el('table', { class: 'cl' }, head.cloneNode(true), d.groups.map(groupBody)))));
+  }
+
   /* ---------- routing ---------- */
-  const VIEWS = ['start', 'journey', 'syllabus', 'iac', 'resources', 'about'];
+  const VIEWS = ['start', 'journey', 'syllabus', 'iac', 'resources', 'glossary', 'about', 'checklist'];
   function route() {
     const [view, arg] = (location.hash.slice(1) || 'start').split('/');
     const v = VIEWS.includes(view) ? view : 'start';
     VIEWS.forEach(name => { $(`#view-${name}`).hidden = name !== v; });
-    $$('.tabs a').forEach(a => { if (a.dataset.view !== v) a.removeAttribute('aria-current'); else a.setAttribute('aria-current', 'page'); });
+    const tab = v === 'checklist' ? 'syllabus' : v;
+    $$('.tabs a').forEach(a => { if (a.dataset.view !== tab) a.removeAttribute('aria-current'); else a.setAttribute('aria-current', 'page'); });
     if (v === 'journey') renderJourney();
-    if (v === 'iac') renderIac();
+    if (v === 'iac') { renderIac(); $$('#view-iac .card p, #view-iac .card li, #view-iac > p').forEach(markTerms); }
+    if (v === 'glossary') renderGlossary($('#gq').value);
+    if (v === 'checklist') renderChecklist();
+    if (v === 'start') $$('#view-start .card li, #view-start .card p').forEach(markTerms);
+    hideTerm();
     if (v === 'syllabus') {
       if (arg && topicById[arg]) {
         // Make sure the linked topic is visible, then scroll to it.
@@ -289,6 +403,9 @@
   renderClusterChips();
   wireFilters();
   wireProgressTools();
+  renderFurther();
+  $('#gq').addEventListener('input', e => renderGlossary(e.target.value));
+  $('#print-btn').addEventListener('click', () => window.print());
   document.addEventListener('change', onChange);
   window.addEventListener('hashchange', route);
   route();

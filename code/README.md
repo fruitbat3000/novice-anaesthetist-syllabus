@@ -19,8 +19,14 @@ Then go to http://localhost:8000.
 
 - `index.html` — the page shell and the static text for each section
 - `data.js` — all the content data: e-LfH session links, IAC clusters, syllabus topics, and the "first anaesthetic" stages
-- `app.js` — routing (`#start`, `#journey`, `#syllabus[/topic-id]`, `#iac`, `#resources`, `#about`), filters, and progress ticks
-- `styles.css` — light and dark themes, which follow the system setting
+- `app.js` — routing (`#start`, `#journey`, `#syllabus[/topic-id]`, `#iac`, `#resources`, `#glossary`, `#about`, `#checklist`), glossary pop-ups, filters, and progress ticks
+- `styles.css` — light theme by default, with an optional dark theme (header toggle) and print styles
+
+## Features
+- **Glossary** (`glossary` in `data.js`): the first use of each term in topic notes, journey steps and the Start/IAC pages becomes tappable. `match` is a regex source. It is case-sensitive unless it contains lowercase letters.
+- **Printable checklist** (`#checklist`): prints the viewer's own ticks. Use "Save as PDF" in the print dialog.
+- **Feedback**: each topic has a "Suggest a change" link that opens a pre-filled GitHub issue (label `feedback`).
+- **Further resources** (`further` in `data.js`): shown on the Resources page and also linked from topics via `links`.
 
 ## Editing content
 

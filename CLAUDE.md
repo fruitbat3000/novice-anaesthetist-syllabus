@@ -32,3 +32,8 @@ Claude-specific working instructions **and** the running session history. Durabl
 ### 2026-09-23 (later still) — Lighter theme, published
 - Mark didn't like the (system dark) colour scheme. The site is now light by default with larger, darker text, a blue accent and an optional dark toggle.
 - Mark chose a **public** repo with GitHub Pages so he could send Dr Brooks a link (see `DECISIONS.md`). Repo: https://github.com/fruitbat3000/novice-anaesthetist-syllabus. Site: https://fruitbat3000.github.io/novice-anaesthetist-syllabus/. Deployed by `.github/workflows/pages.yml` (it publishes `code/`).
+
+### 2026-09-23 (evening) — Enhancements 1–4 and 8
+- Mark approved: a weekly link check, Dr Brooks's glossary as tappable terms, a printable checklist, per-topic feedback links, and a "Further resources" section. He'll loop back on the rest (timeline, evidence ideas per IAC cluster, self-tests, Yorkshire layer) after Dr Brooks reviews.
+- Further resources were all verified (S11). BJA Education was left out because its bot challenge stopped verification.
+- The link checker passes locally: 118 OK, 22 bot-protected links listed for checking by hand.

@@ -1,0 +1,43 @@
+# Weekly check that every link on the site still works (especially e-LfH sessions,
+# which get retired or renumbered). Opens or updates a GitHub issue if anything breaks,
+# and closes it again once everything passes.
+name: Weekly link check
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check links
+        id: check
+        continue-on-error: true
+        run: node scripts/check-links.mjs link-report.md
+      - name: Open, update or close the link-check issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILED: ${{ steps.check.outcome == 'failure' }}
+        run: |
+          gh label create link-check --color d93f0b --description "Automated link check" 2>/dev/null || true
+          existing=$(gh issue list --label link-check --state open --json number --jq '.[0].number')
+          if [ "$FAILED" = "true" ]; then
+            if [ -n "$existing" ]; then
+              gh issue comment "$existing" --body-file link-report.md
+            else
+              gh issue create --title "Broken links on the site" --label link-check --body-file link-report.md
+            fi
+            exit 1
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All links passed on $(date -u +%F)."
+          fi

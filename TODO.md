@@ -3,20 +3,20 @@
 Outstanding work and open questions. Completed items move out (delete, or strike through and date). Scope is fixed in `DECISIONS.md` (2026-09-23).
 
 ## Now
+- [ ] **Loop back after Dr Brooks's review**, then decide on: a suggested week-by-week timeline, evidence ideas per IAC cluster, per-topic self-test questions (Al to write or check), and a Yorkshire hospital layer.
 - [ ] Mark (and ideally Dr Brooks) to review the site: topic notes, IAC paraphrases, the "first anaesthetic" wording, and the topic-to-cluster tags.
 - [ ] Add Yorkshire local detail: each hospital's IAC preparation programme, the critical incident course, novice courses, and College Tutor contacts. Ask Mark or the school.
 
 ## Soon
 - [ ] Check the site at phone width in a real browser (not done: the test window couldn't be resized).
-- [ ] Consider more resources beyond e-LfH for topics that have no e-LA session: data interpretation, scope of practice, QRH, human factors.
+- [ ] Ask Al which textbooks and other resources he recommends (BJA Education articles could not be verified automatically).
 - [ ] Decide whether to add Module 1 topics the old syllabus had but the site doesn't cover separately: premedication, and the 2010 CCT items on day-case suitability, PONV risk, post-op confusion and hypotension/hypertension.
 
 ## Someday / maybe
 - [ ] Consider getting Dr Brooks's permission in a short email for the record.
 - [ ] Get sign-off from the school's leads before sharing with trainees.
 - [ ] Decide on long-term hosting for the school (it is currently public on GitHub Pages as a draft).
-- [ ] Re-check links periodically (method in `SOURCES.md`). e-LfH IDs change when sessions are retired.
-- [ ] Printable one-page checklist view (like the "I have" column in Dr Brooks's original).
+- [ ] Every few months, check the bot-protected links by hand (RCoA, Y&H deanery, DOI links). The weekly workflow lists them in its report.
 
 ## Open questions
 - Yorkshire school: confirm local contacts and any school-specific IAC process or teaching programme to link to.
