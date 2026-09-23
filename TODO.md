@@ -10,12 +10,11 @@ Outstanding work and open questions. Completed items move out (delete, or strike
 - [ ] Check the site at phone width in a real browser (not done: the test window couldn't be resized).
 - [ ] Consider more resources beyond e-LfH for topics that have no e-LA session: data interpretation, scope of practice, QRH, human factors.
 - [ ] Decide whether to add Module 1 topics the old syllabus had but the site doesn't cover separately: premedication, and the 2010 CCT items on day-case suitability, PONV risk, post-op confusion and hypotension/hypertension.
-- [ ] Create a private GitHub repo and push.
 
 ## Someday / maybe
 - [ ] Consider getting Dr Brooks's permission in a short email for the record.
 - [ ] Get sign-off from the school's leads before sharing with trainees.
-- [ ] Decide how to host it for the school (public web vs restricted).
+- [ ] Decide on long-term hosting for the school (it is currently public on GitHub Pages as a draft).
 - [ ] Re-check links periodically (method in `SOURCES.md`). e-LfH IDs change when sessions are retired.
 - [ ] Printable one-page checklist view (like the "I have" column in Dr Brooks's original).
 

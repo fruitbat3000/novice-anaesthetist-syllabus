@@ -28,3 +28,7 @@ Claude-specific working instructions **and** the running session history. Durabl
 - Built `code/` as a static site. All 100 e-LfH session links were checked with curl (200, not retired, code matched).
 - The Y&H deanery novice page has been retired. YAIRN was found as the school's teaching network.
 - Next: Mark reviews the site, then add Yorkshire local detail (`TODO.md`).
+
+### 2026-09-23 (later still) — Lighter theme, published
+- Mark didn't like the (system dark) colour scheme. The site is now light by default with larger, darker text, a blue accent and an optional dark toggle.
+- Mark chose a **public** repo with GitHub Pages so he could send Dr Brooks a link (see `DECISIONS.md`). Repo: https://github.com/fruitbat3000/novice-anaesthetist-syllabus. Site: https://fruitbat3000.github.io/novice-anaesthetist-syllabus/. Deployed by `.github/workflows/pages.yml` (it publishes `code/`).
