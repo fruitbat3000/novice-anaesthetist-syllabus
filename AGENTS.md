@@ -13,6 +13,7 @@ Just scaffolded. See `STATUS.md` for the live detail.
 
 ## Structure
 - `code/`: website source → GitHub
+- `docs/`: reference documents, **not in git** (currently *An Introduction to Anaesthesia* PDF)
 
 ## Conventions
 - Folder names kebab-case, UK English, ISO dates. Full rules: `shared-conventions/conventions.md`.

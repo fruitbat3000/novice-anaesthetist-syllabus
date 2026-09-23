@@ -21,7 +21,8 @@ novice-anaesthetist-syllabus/
 ├── SOURCES.md       # source register (RCoA curriculum documents)
 ├── .gitignore
 ├── .editorconfig
-└── code/            # the website → GitHub
+├── code/            # the website → GitHub
+└── docs/            # reference PDFs, NOT in git
 ```
 
 ## Security class

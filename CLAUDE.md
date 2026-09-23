@@ -12,4 +12,7 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ### 2026-09-23 — Project scaffolded (Claude Code, Mark's Mac)
 - Created from shared-project-template via `new-project.sh`. Class 0. Removed ARCHIVE-NOTE, HANDOVER, variants.
-- **Next step:** agree scope and audience, then gather the RCoA curriculum sources.
+- Scope confirmed by Mark: a website signposting the RCoA curriculum to year-1 trainees; nothing sensitive.
+- Mark supplied *An Introduction to Anaesthesia* (PDF, 30 pp, 2018), now in `docs/` (gitignored, so local only). A skim shows it's a self-directed novice guide whose Section 5 is a full novice syllabus with an "I have" checklist. It references the **2010** curriculum (Annex B), so it needs re-mapping to 2021. Author not stated. See `SOURCES.md` S2.
+- Still unanswered: audience (department vs national), timespan (to IAC vs all of CT1), depth (links only vs local teaching), access (public vs restricted), PDF authorship/reuse.
+- **Next step (restart here):** ask Mark those open questions, then read the PDF in full against the 2021 Stage 1 curriculum and propose a site structure.
