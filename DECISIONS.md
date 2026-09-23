@@ -4,6 +4,22 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-23 — Publish publicly on GitHub Pages for review
+
+**Decision:** Push to a **public** GitHub repo (`fruitbat3000/novice-anaesthetist-syllabus`) and publish `code/` with GitHub Pages, so Mark can send Dr Brooks a link. The site is now light by default, with an optional dark mode.
+
+**Context:** Mark wanted to share the site with Dr Brooks. GitHub Pages on a private repo needs a paid plan. Mark chose public over a private repo or a private claude.ai page.
+
+**Options considered:** a public repo with Pages; a private repo with Al invited as a collaborator; a private repo plus a private claude.ai page.
+
+**Rationale:** The content is class 0 (published curriculum material and links, with no trainee or patient data), and a clickable link is the simplest way for a reviewer to see it.
+
+**Consequences:** This **supersedes "local only for now"** in the scope decision below. The site is publicly reachable before school sign-off, so treat it as a draft. `docs/` (Dr Brooks's PDF) stays out of git. Deployment is by `.github/workflows/pages.yml` on every push to `main`.
+
+**Status:** accepted
+
+---
+
 ## 2026-09-23 — Site structure and technology (first version)
 
 **Decision:**

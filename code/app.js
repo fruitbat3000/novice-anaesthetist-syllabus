@@ -263,7 +263,26 @@
     });
   }
 
+  /* ---------- theme (light unless the viewer picks dark) ---------- */
+  function wireTheme() {
+    const btn = $('#theme-toggle');
+    const apply = t => {
+      if (t === 'dark') document.documentElement.dataset.theme = 'dark';
+      else delete document.documentElement.dataset.theme;
+      btn.textContent = t === 'dark' ? 'Light mode' : 'Dark mode';
+    };
+    let theme = 'light';
+    try { theme = localStorage.getItem('nas-theme') || 'light'; } catch (e) { /* ignore */ }
+    apply(theme);
+    btn.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      apply(theme);
+      try { localStorage.setItem('nas-theme', theme); } catch (e) { /* ignore */ }
+    });
+  }
+
   /* ---------- start ---------- */
+  wireTheme();
   load();
   fillStaticLinks();
   renderSummary();
