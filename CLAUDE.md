@@ -15,6 +15,7 @@ Claude-specific working instructions **and** the running session history. Durabl
 - Scope confirmed by Mark: a website signposting the RCoA curriculum to year-1 trainees; nothing sensitive.
 - Mark supplied *An Introduction to Anaesthesia* (PDF, 30 pp, 2018), now in `docs/` (gitignored, so local only). A skim shows it's a self-directed novice guide whose Section 5 is a full novice syllabus with an "I have" checklist. It references the **2010** curriculum (Annex B), so it needs re-mapping to 2021. Author not stated. See `SOURCES.md` S2.
 - Scope answered by Mark and recorded in `DECISIONS.md`: regional school; novice period up to the IAC; links, especially e-LfH; local only for now.
-- The PDF's author is Dr Alistair Brooks, a colleague of Mark's. Reuse permission hasn't been asked for yet.
+- The PDF's author is Dr Alistair Brooks, a colleague of Mark's. He was present and gave permission in person to reuse/adapt it with credit.
+- The school is Yorkshire.
 - Session ended here, ready to restart in this subfolder.
-- **Next step (restart here):** work through `TODO.md` "Now": verify the RCoA IAC material and e-LfH content, read the PDF in full and map it, then propose a site structure. Ask Mark which regional school.
+- **Next step (restart here):** work through `TODO.md` "Now": verify the RCoA IAC material and e-LfH content, read the PDF in full and map it, then propose a site structure. Ask Mark about the Yorkshire school's local IAC process and teaching programme.

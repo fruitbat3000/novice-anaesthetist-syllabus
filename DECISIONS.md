@@ -4,10 +4,26 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-23 — Dr Alistair Brooks's guide may be reused
+
+**Decision:** The site may credit, link to and adapt Dr Alistair Brooks's *An Introduction to Anaesthesia* (`SOURCES.md` S2).
+
+**Context:** Dr Brooks gave permission in person to Mark on 2026-09-23. It was verbal, with Dr Brooks present during the session.
+
+**Options considered:** Link only to RCoA/e-LfH without using the guide; use the guide with permission.
+
+**Rationale:** The guide already has a novice syllabus and a teaching approach built for exactly this audience.
+
+**Consequences:** The guide can form the backbone of the site's structure. Credit Dr Brooks on the site. Update anything that's outdated (it was written against the 2010 curriculum) rather than presenting it as current.
+
+**Status:** accepted
+
+---
+
 ## 2026-09-23 — Scope of the site
 
 **Decision:**
-- **Audience:** novice trainees in a single regional school of anaesthesia.
+- **Audience:** novice trainees in the Yorkshire regional school of anaesthesia.
 - **Timespan:** the novice period up to the Initial Assessment of Competence (IAC).
 - **Depth:** mainly links, especially to e-Learning for Healthcare (e-LfH) modules. Content is signposting, not original teaching material.
 - **Access:** local only for now (run and viewed on Mark's machine). Public or school-wide hosting is a later decision.

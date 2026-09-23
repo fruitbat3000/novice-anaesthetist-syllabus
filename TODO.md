@@ -14,10 +14,9 @@ Outstanding work and open questions. Completed items move out (delete, or strike
 - [ ] Create a private GitHub repo and push.
 
 ## Someday / maybe
-- [ ] Ask Dr Alistair Brooks whether his guide can be credited, linked or adapted on the site.
+- [ ] Consider getting Dr Brooks's permission in a short email for the record.
 - [ ] Get sign-off from the school's leads before sharing with trainees.
 - [ ] Decide how to host it for the school (public web vs restricted).
 
 ## Open questions
-- Which regional school? (Affects local links, contacts and any school-specific IAC process.)
-- Does Dr Brooks agree to reuse/adaptation of his guide?
+- Yorkshire school: confirm the exact school name, local contacts and any school-specific IAC process or teaching programme to link to.

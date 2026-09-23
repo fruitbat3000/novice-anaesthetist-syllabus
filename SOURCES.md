@@ -12,4 +12,4 @@ Every source this project relies on, with provenance so claims can be traced and
 - RCoA material is copyright. The site links to it and summarises; it does not reproduce it.
 
 ## Unverified / inferred
-- S2 is by Dr Alistair Brooks. **Permission to reuse or adapt it on the site hasn't been asked for yet.** Don't quote it on the site until he agrees.
+- S2 is by Dr Alistair Brooks. He gave permission for reuse/adaptation with credit in person on 2026-09-23 (see `DECISIONS.md`).
